@@ -1,0 +1,278 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+/* Header Row */
+#header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   /* logo left, menu right */
+    padding: 15px 20px;
+    background-color: #000;
+}
+
+
+/* Navigation */
+.nav {
+    display: flex;
+    gap: 0px;
+}
+
+/* Menu links */
+.menu {
+    color: white;
+    text-decoration: underline;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 3px 2px;
+}
+
+.menu:hover {
+    text-decoration: none;
+    background-color: rgb(224, 148, 7);
+}
+   
+
+/* Login button */
+.nav button {
+    padding: 6px 14px;
+    border: none;
+    background-color: orange;
+    color:#e8e8e8;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.nav button:hover {
+    background-color: #af7119;
+    text-decoration:underline
+}
+ 
+
+    button{
+        background-color: chocolate;
+
+    }
+    #logo {
+        font-size: 30px;
+        color: rgb(207, 102, 27);
+        font-family: Arial;
+        padding-left: 30px;
+        font-weight: bold;
+    }
+    a {
+        margin-right: 120px;
+    }
+    #contact {
+        height:100px;
+    }
+    #great {
+        color: whitesmoke;
+        background-color: rgb(20, 19, 19);
+        text-align: center;
+        
+
+    }
+    .hero {
+        color: whitesmoke;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 39px;
+        font-weight: bold;
+        height: 550px;
+        background: url('https://images.unsplash.com/photo-1572953109213-3be62398eb95?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bXVzZXVtfGVufDB8fDB8fHww') no-repeat center / cover;
+    }
+    #herobutton {
+        text-align: center;
+        display:flex;
+    }
+    .section{
+        padding: 40px;
+        text-align: center;
+    }
+    .gallery{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 40px;
+    }
+    .card{
+        width: 280px;
+        background: white;
+        box-shadow: white;
+        cursor: pointer;
+        background:#141414;
+        border-radius:10px;
+        padding:15px;
+        box-shadow:0 0 20px rgba(255,255,255,0.06);
+    }
+    .card img{
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius:8px;
+    }
+    .card h3{
+         color:#f5f5f5; 
+    }
+    body{
+         
+        font-family: sans-serif;
+        margin:0;
+        background-color:#0e0e0e;
+        background-image:url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+        color:#e8e8e8;      
+    }
+    footer{
+        height:100px;
+        color:aliceblue;
+        text-align: center;
+        background-color: #0f1111;
+    }
+   /* //////////////// */
+   .container {
+    min-height: 3vh;
+    padding: 20px 60px;
+    border: 3px solid rgb(29, 28, 28);
+}
+/* Header */
+.header h1 {
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgb(207, 102, 27);
+}
+/* SECTION */
+.artwork-section {
+    padding: 60px 80px;
+}
+
+.artwork-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+/* GRID */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    margin-bottom:40px;
+}
+
+/* CARD */
+.art-card {
+    background-color: #111;
+    border-radius: 8px;
+    overflow:hidden;
+    transition: transform 0.3s ease;
+}
+
+.art-card:hover {
+    transform: translateY(-6px);
+}
+
+/* IMAGE */
+.art-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.art-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* PRICE TAG */
+.price {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.75);
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+/* TEXT */
+.art-card h3 {
+    margin: 15px 15px 5px;
+    font-size: 16px;
+}
+
+.art-card p {
+    margin: 0 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.art-card span {
+    margin: 5px 15px;
+    font-size: 13px;
+    color: #777;
+    display: block;
+}
+/* gallery site */
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #000;
+}
+
+.logo {
+    color: #ff9800;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: underline;
+    color: #fff;
+    font-size: 17px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    background: #ff9800;
+    color: #000 !important;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.login-btn:hover {
+    background: #ffa726;
+}
+/* gallery footer */
+.foot{
+    color: white;
+    background-color: black;
+    text-decoration: white;
+}
