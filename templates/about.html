@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | Art Sphere</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            color: #ffffff;
+            background-color: #0e0e0e;
+        }
+
+        .about-section {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* LEFT IMAGE */
+        .about-image {
+            width: 50%;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        /* RIGHT CONTENT */
+        .about-content {
+            width: 50%;
+            padding: 80px;
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-content h1 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            color: #ff9800;
+        }
+
+        .about-content p {
+            color: #bbb;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .about-content a {
+            color: #4a6cff;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .about-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="about-section">
+
+    <!-- LEFT SIDE IMAGE -->
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='images/art_about1.jpg') }}" alt="Art Gallery">
+    </div>
+
+    <!-- RIGHT SIDE CONTENT -->
+    <div class="about-content">
+        <h1>ABOUT US</h1>
+
+        <p>
+            We are a contemporary art gallery dedicated to showcasing
+            inspiring artworks from talented artists around the world.
+        </p>
+
+        <p>
+            Our mission is to connect creativity with passion through
+            exhibitions, collections, and digital experiences.
+        </p>
+
+        <p>
+            Discover modern, abstract, and classic art in one place.
+        </p>
+
+        <a href="https://www.linkedin.com/in/ayesha-masood-905b2037a" target="_blank">
+            Go to LinkedIn
+        </a>
+
+        <a href="https://www.facebook.com/share/17nmzoFC5u/" target="_blank">
+            Go to Facebook
+        </a>
+    </div>
+
+</section>
+
+</body>
+</html>
