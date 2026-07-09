@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(120deg, #0f3460, #16213e, #1a1a2e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-container {
+            background: #111;
+            padding: 35px;
+            width: 340px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #aaa;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #222;
+            border: 1px solid #333;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        input:focus {
+            border-color: #00adb5;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #00adb5;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #019ca4;
+        }
+
+        span {
+            display: block;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        a {
+            color: #00adb5;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="signup-container">
+    <h2>Create Account</h2>
+    <p>Join our Art Gallery</p>
+
+    <form method="POST" action="/register">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+    <p style="color: #f00;">{{message}}</p>
+    <span>Already have an account? <a href="{{url_for('index')}}">Home</a></span>
+</div>
+
+
+
+</body>
+</html>

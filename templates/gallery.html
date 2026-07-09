@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>
+<body>
+<nav class="navbar">
+    <div class="logo">ARTSPHERE</div>
+
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/cart">Cart</a></li>
+    </ul>
+</nav>
+
+<section class="artwork-section">
+    <h2>Latest Artwork</h2>
+
+    <div class="art-grid">
+        {% for id, art in artworks.items() %}
+        <div class="art-card">
+            <div class="art-image">
+                <a href="/detail/{{id}}">
+                <img src="{{url_for('static',filename='images/'+ art.image)}}" alt="{{art.name}}">
+                </a>
+                <span class="price">{{art.price}}</span>
+            </div>
+            <h3>{{art.name}}</h3>
+            <p>Artist: {{art.artist}}</p>
+            <span>Medium: {{art.medium}}</span>
+            <form method="POST" action="/add_to_cart/{{id}}">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+</body>
+</html>
+

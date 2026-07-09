@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order</title>
+<style>
+body{
+    background-color:#0e0e0e;
+    color:#fff;
+    font-family:Arial;
+}
+.cart-box{
+    max-width:700px;
+    margin:50px auto;
+    background:#111;
+    padding:30px;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+th, td{
+    padding: 10px;
+    border-bottom:1px solid#555;
+}
+button{
+    padding:5px 10px;
+    background:#ff9800;
+    color:#000;
+    border:none;
+    border-radius: 5px;
+    font-size:16px;
+}
+button:active{
+    background:#c7740f;   /* click par dark orange */
+    transform: scale(0.97);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cart-box">
+    <h2> Your Cart</h2>
+    {% if cart %}
+    <table>
+        <tr>
+            <th>Artwork</th>
+            <th>Price (£)</th>
+            <th>Remove</th>
+        </tr>
+        {% for item in cart %}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td><a href="/remove_from_cart/{{loop.index0}}"><button>Remove</button></a></td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td><strong>Total</strong></td>
+            <td>{{total}}</td>
+            <td></td>
+        </tr>
+    </table>
+    <h3>Place Order</h3>
+    <form method="POST" action="/place_order"> 
+        <input type="text" name="fullname" placeholder="Full Name" required><br><br>
+        <input type="text" name="address" placeholder="Address" required><br><br>
+        <input type="tel" name= "contact" placeholder="Contact Number" required><br><br>
+
+        <button type="submit">Order Now</button>
+    </form>
+    {% else %}
+    <p>Your cart is empty!</p>
+    {% endif %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | Art Sphere</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #0e0e0e;
+            background-image: url("{{ url_for('static', filename='images/art_about1.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #e8e8e8;
+        }
+
+        .container {
+            min-height: 100vh;
+            padding: 70px 60px;
+            border: 3px solid rgb(29, 28, 28);
+            background-color: rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Header */
+        .header h1 {
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: rgb(207, 102, 27); /* yellow color preserved */
+        }
+
+        .header h2 {
+            font-weight: 500;
+            margin-top: 30px;
+            font-size: 36px;
+            color: #e8e8e8;
+            letter-spacing: 3px;
+        }
+
+        .work-button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            border: 2px solid #fff;
+            display: inline-block;
+            font-style: italic;
+            font-size: 18px;
+            color: #e8e8e8;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 250px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #e8e8e8;
+            margin: 0 8px;
+        }
+
+        .footer a:hover {
+            color: rgb(207, 102, 27);
+        }
+
+        .footer p {
+            margin: 8px 0;
+        }
+
+        .footer .email {
+            text-decoration: underline;
+        }
+
+        .footer a.contact-link {
+            color: rgb(67, 67, 241);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header class="header">
+        <h1>ART SPHERE</h1>
+        <h2>Make Your Mark</h2>
+        <span class="work-button">Work With Us</span>
+
+       
+    </header>
+
+    <!-- Footer / Contact Info -->
+    <footer class="footer">
+         
+        <p>
+            <a href="{{ url_for('index') }}">Home</a> |
+            <a href="{{ url_for('gallery') }}">Gallery</a> |
+            <a href="{{ url_for('contact') }}">Contact</a> |
+            <a href="{{ url_for('about') }}">About</a>
+        </p>
+
+        <p>
+            <a href="https://www.linkedin.com/in/ayesha-masood-905b2037a" target="_blank">
+                LinkedIn
+            </a> |
+            <a href="https://www.facebook.com/share/17nmzoFC5u/" target="_blank">
+                Facebook
+            </a>
+        </p>
+        <br>
+
+        <p class="email">ayeshamasood@gmail.com</p>
+        <p><a class="contact-link" href="tel:123456897">(123) 456-897</a></p>
+
+        <p class="email">madeeha.t.1.7@gmail.com</p>
+        <p><a class="contact-link" href="tel:123654797">(123) 654-797</a></p>
+
+        <p>
+            University of Engineering and<br>
+            Technology, Lahore
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

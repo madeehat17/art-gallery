@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ art.name }} - Art Sphere</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <style>
+        .detail-container{
+            max-width:900px;
+            margin:50px auto;
+            background-color:#141414;
+            padding:20px;
+            border-radius:10px;
+            color:#e8e8e8;
+        }
+        .art-image img{
+            width:100%;
+            height:400px;
+            object-fit:cover;
+            border-radius:8px;
+        }
+        .art-info{
+            margin-top:20px;
+        }
+        .art-info h2{
+            margin-bottom:10px;
+            color:#ff9800
+        }
+        .art-info p{
+            margin:5px 0;
+        }
+        .back-btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:8px 16px;
+            background-color:orange;
+            color:#000;
+            text-decoration:none;
+            border-radius:6px;
+        }
+        .back-btn:hover{
+            background-color: #ffa726;
+        }
+       </style>
+    </head>
+<body>
+    <div class="detail-container">
+        <div class="art-image">
+            <img src="{{url_for('static',filename='images/'+ art.image)}}" alt="{{art.name}}">
+        </div>
+        <div class="art-info">
+            <h2>{{ art.name }}</h2>
+            {% if art.medium %}
+            <p><strong>Medium:</strong>{{ art.medium }}</p>
+            {% endif %}
+            <p><strong>Price:</strong> £ {{ art.price }}</p>
+        </div>
+        <a href="{{url_for('gallery')}}" class="back-btn">Back to Gallery</a>
+    </div>
+</body>
+</html>

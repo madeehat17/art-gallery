@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART SPHERE WEB</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <script src="{{url_for('static',filename='java.js')}}"></script>
+</head>
+
+
+<body>
+    <header>
+    
+    <div   id="header-row">
+
+        <div class="ARTSPHERE">
+            <a id="logo">ARTSPHERE</a>
+        </div>
+        <nav class="nav">
+            <a href="{{url_for('index')}}" class="menu">Home</a>
+            <a href="{{url_for('gallery')}}" class="menu">Gallery</a>
+            <a href="javascript:void(0)" onclick="scrollToSection('artist')" class="menu">Artists</a>
+            <a href="{{url_for('contact')}}" class="menu">Contact</a>
+            <a href="{{url_for('about')}}" class="menu">About</a>
+            <a href="{{url_for('login')}}"><button>LOGIN</button></a>
+        </nav>
+
+    </div>
+
+    </header>
+
+    <h1 id="great"> Welcome to Art Sphere </h1>
+    <body>
+    <!-- front page with hero picture -->
+    <div class="hero"> 
+        Discover Art And<br>
+        Find Your Masterpiece
+    </div>
+    
+    <!-- Gallery-->
+    <div id="gallery"class="section">
+        <h2>-------------------------- Top Art Collection --------------------------</h2><br>
+        <p>Explore stunning visual artwork from talented artists</p>
+
+        <div class="gallery top">
+            <div class="card" onclick="openModal('Sunset Painting')">
+                <img src="{{url_for('static', filename='images/sunset_painting.jpg')}}">
+                <h3>Sunset Paintings</h3>
+            </div>
+            <div class="card" onclick="openModal('Modern Art Canvas')">
+                <img src="{{url_for('static',filename='images/modern_art_canvas.jpg')}}">
+                <h3>Modern Art Canvas</h3>
+            </div>
+
+            <div class="card" onclick="openModal('Vintage Paintings')">
+                <img src="{{url_for('static',filename='images/vintage_paintings.jpg')}}">
+                <h3>Vintage Paintings</h3>
+            </div>
+            
+            
+        </div>
+        <div class="gallery below">
+            <div class="card" onclick="openModal('Pop Art')">
+                <img src="{{url_for('static',filename='images/pop_art.jpg')}}">
+                <h3>Pop Art</h3>
+            </div>
+            <div class="card" onclick="openModal('Cubism')">
+                <img src="{{url_for('static',filename='images/cubism.jpg')}}" alt="Cubism ">
+                <h3>Cubism</h3>
+            </div>
+            <div class="card" onclick="openModal('Impressionism')">
+                <img src="{{url_for('static',filename='images/impressionism.jpg')}}">
+                <h3>Impressionism</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- artist section -->
+     <div id="artist" class="section">
+        <h2>-------------------------- Feautured Artists --------------------------</h2><br>
+        <p>Meet the talented artists behind the artworks</p>
+
+        <div class="gallery top">
+            <div class="card">
+                <img src="{{url_for('static',filename='images/sarah.jpg')}}">
+                <h3>Sarah Johnson</h3>
+                <p>Specializes in abstract and modern art.</p>
+            </div>
+
+            <div class="card">
+                <img src="{{url_for('static',filename='images/micheal.jpg')}}">
+                <h3>Michael Rivera</h3>
+                <p>Famous for landscape and watercolor painting.</p>
+            </div>
+            <div class="card">
+                <img src="{{url_for('static',filename='images/franz.jpg')}}">
+                <h3>Franz Kline</h3>
+                <p>Action Painting and Abstract Expressionism.</p>
+            </div>
+        </div>
+        <div class="gallery below">
+            <div class="card">
+                <img src="{{url_for('static',filename='images/jules.jpg')}}">
+                <h3>Jules Olitsk</h3>
+                <p>Pioneering work in Color Field painting.</p>
+            </div>
+
+            <div class="card">
+                <img src="{{url_for('static',filename='images/madeleine_bialke.jpg')}}">
+                <h3>Madeleine Bialke</h3>
+                <p>Uses color to generate and indicate emotion.</p>
+            </div>
+
+            <div class="card">
+                <img src="{{url_for('static',filename='images/salvador.jpg')}}">
+                <h3>Salvador Dalí</h3>
+                <p>Major themes in his work include dreams, the subconscious.</p>
+            </div>
+        </div>
+
+        <div class="gallery below more">
+            <div class="card">
+                <img src="{{url_for('static',filename='images/johannes.jpg')}}">
+                <h3>Johannes Vermeer</h3>
+                <p>Known for his mastery of light and shadow.</p>
+            </div>
+
+            <div class="card">
+                <img src="{{url_for('static',filename='images/edward.jpg')}}">
+                <h3>Edward Ruscha</h3>
+                <p>Transforming the ordinary, elevating language to art.</p>
+            </div>
+        </div>
+
+     </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: artgallery@example.com</p>
+        <p>Phone: +123 456 7890</p>
+    </div>
+</body>
+
+    <footer>
+        Made with &#9829 by Ayesha Masood & Madeeha Tariq<br>
+        &copy; UETIAN . All rights reserved.
+    </footer>
+    <script src="{{url_for('static',filename='java.js')}}"></script>
+</body>
+</html>
